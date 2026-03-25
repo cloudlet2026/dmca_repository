@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>top_adc_sample_0_0</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>sys_rstn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sys_rstn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_RSTN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SYS_RSTN.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>adc_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>adc_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ADC_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ADC_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ADC_CLK.CLK_DOMAIN">top_adc_sample_0_0_adc_clk</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ADC_CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ADC_CLK.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.ADC_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sys_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sys_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_CLK.ASSOCIATED_RESET">sys_rstn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SYS_CLK.FREQ_HZ">66666672</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SYS_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SYS_CLK.CLK_DOMAIN">top_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SYS_CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.SYS_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>adc_sample_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Sat Nov 01 12:18:49 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:112aab48</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>top_adc_sample_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Sat Nov 01 12:18:49 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:112aab48</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>adc_sample_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Sat Nov 01 12:18:49 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ca25fe5c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
+        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>top_adc_sample_0_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Sat Nov 01 12:18:49 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:ca25fe5c</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Sat Nov 01 12:18:54 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:112aab48</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>sys_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sys_rstn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_datain</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">11</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_fifo_dataout</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">13</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_oe</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/fifo_generator_0/fifo_generator_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/3d45/hdl/adc_sample_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/top_adc_sample_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/fifo_generator_0/fifo_generator_0.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/3d45/hdl/adc_sample_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/top_adc_sample_0_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>top_adc_sample_0_0.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>top_adc_sample_0_0_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>top_adc_sample_0_0_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>top_adc_sample_0_0_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>top_adc_sample_0_0_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>fifo cache adc data</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">top_adc_sample_0_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>adc_sample_v1.0</xilinx:displayName>
+      <xilinx:xpmLibraries>
+        <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+      </xilinx:xpmLibraries>
+      <xilinx:coreRevision>6</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed35461_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d1d3506_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6035421c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10172c5a_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32d5b14e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11f24f81_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e047f6d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f54fc6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b30efc_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67f5f021_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a35145b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4111821f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e9dc3c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1da59ae8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b6bac80_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51523213_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42ec13fb_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64a08571_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c7a5f8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@337253d5_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b88c6db_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@661a690f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7302bfb6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1413c5c6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d95c92_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a447bdd_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a36a5ef_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d9587c7_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4af59ad7_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3617e0e2_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42055e9d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@160ef390_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ad2140_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32378de0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fab2ed_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@556e46c6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4eae2df0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@706abd19_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d26f119_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1547fc62_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3d9edc_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d2e47a8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22c14400_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d1ba135_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b84df58_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c9c909c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c008b0d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24ff12f2_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1353c163_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e4a50e2_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@563aa30c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dcc1b3d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@199d2112_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52917bb9_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a7a6bb3_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@694969f4_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47005dd_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ca3fb17_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@221a7ea6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39883289_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e163444_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6075f35b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@432bec8c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45ed9015_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b7c7040_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6431ea_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5945a40e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c10b5cc_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36c87ef6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45d84e80_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff09326_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19ae5d48_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27014887_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dfd00fe_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b67793b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14a13550_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d0b136e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58b69dda_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c24daa3_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a404c3d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ec44aa6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68723724_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3050857e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f6e35b1_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b7794a5_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/adc_sample_1.0</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_CLK.CLK_DOMAIN" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYS_CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYS_CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="9b866fcd"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="682055f1"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="7b2259ef"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="e70463a3"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

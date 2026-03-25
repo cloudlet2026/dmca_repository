@@ -1,0 +1,62 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "PinnedBlocks":"",
+   "PinnedPorts":"",
+   "commentid":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 760 -defaultsOSRD -left
+preplace port adc_clk -pg 1 -y 730 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 740 -defaultsOSRD -left
+preplace portBus adc_data -pg 1 -y 330 -defaultsOSRD
+preplace inst dmca_0 -pg 1 -lvl 3 -y 210 -defaultsOSRD
+preplace inst adc_sample_0 -pg 1 -lvl 2 -y 300 -defaultsOSRD
+preplace inst axi_lite_ctrl_0 -pg 1 -lvl 3 -y 550 -defaultsOSRD -orient R180
+preplace inst axi_smc -pg 1 -lvl 2 -y 510 -defaultsOSRD -resize 217 120
+preplace inst rst_adc_clk -pg 1 -lvl 1 -y 470 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -y 500 -defaultsOSRD -orient R180
+preplace inst system_ila_0 -pg 1 -lvl 1 -y 220 -defaultsOSRD
+preplace inst pl_bram_ctrl_0 -pg 1 -lvl 4 -y 340 -defaultsOSRD
+preplace inst axi_bram_ctrl_0 -pg 1 -lvl 4 -y 640 -defaultsOSRD -resize 191 123
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 700 -defaultsOSRD -orient R180 -resize 312 198
+preplace netloc processing_system7_0_DDR 1 0 2 NJ 760 NJ
+preplace netloc axi_lite_ctrl_0_peak_threshold_count 1 2 1 890
+preplace netloc axi_lite_ctrl_0_na 1 2 1 900
+preplace netloc pl_bram_ctrl_0_intr1 1 2 3 780 740 N 740 1780
+preplace netloc axi_lite_ctrl_0_alg_en 1 0 3 -130 -50 N -50 820
+preplace netloc axi_smc_M01_AXI 1 2 2 800 730 1340
+preplace netloc axi_lite_ctrl_0_nb 1 2 1 910
+preplace netloc axi_lite_ctrl_0_adc_en 1 0 3 -50 40 340 200 810J
+preplace netloc axi_lite_ctrl_0_spe_intr_clr 1 0 4 -110 -20 N -20 840 -20 1400J
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 340
+preplace netloc axi_bram_ctrl_0_BRAM_PORTA 1 4 1 1750
+preplace netloc pl_bram_ctrl_0_intr_clr_resp 1 0 5 -50 820 N 820 N 820 1360 720 1760
+preplace netloc axi_smc_M00_AXI 1 2 2 810 720 1350
+preplace netloc axi_lite_ctrl_0_a_over_na_mul_a_minus_b 1 2 1 920
+preplace netloc dmca_0_peak_value_ok 1 0 4 -80 -40 N -40 N -40 1420
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 -40 640 NJ
+preplace netloc pl_bram_ctrl_0_BRAM_PORT 1 4 1 1770
+preplace netloc axi_lite_ctrl_0_peak_threshold 1 2 1 880
+preplace netloc triangle_data 1 0 4 -60 0 NJ 0 NJ 0 1340J
+preplace netloc adc_data_1 1 0 2 -140J 50 310J
+preplace netloc rst_adc_clk_peripheral_aresetn 1 1 3 320 210 870 30 1370
+preplace netloc dmca_0_peak_value 1 0 4 -40 10 N 10 N 10 1390
+preplace netloc processing_system7_0_FIXED_IO 1 0 2 NJ 740 NJ
+preplace netloc axi_lite_ctrl_0_b 1 2 1 940
+preplace netloc axi_lite_ctrl_0_inv_na_mul_a_minus_b 1 2 1 930
+preplace netloc axi_lite_ctrl_0_peakext_delay_time 1 2 1 950
+preplace netloc adc_sample_0_adc_fifo_dataout 1 0 3 -90 -60 N -60 860
+preplace netloc axi_lite_ctrl_0_spe_en 1 0 4 -120 -30 N -30 850 -30 1410J
+preplace netloc trapezd_data 1 0 4 -70 -10 NJ -10 NJ -10 1360J
+preplace netloc adc_sample_0_adc_oe 1 2 1 830J
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 5 -100 30 330 80 790 20 1380 730 NJ
+levelinfo -pg 1 -180 140 600 1150 1610 1870 -top -110 -bot 1100
+"
+}
+{
+   "da_axi4_cnt":"6",
+   "da_board_cnt":"5",
+   "da_bram_cntlr_cnt":"1",
+   "da_clkrst_cnt":"14",
+   "da_ps7_cnt":"1"
+}

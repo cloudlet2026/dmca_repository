@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>dmca</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>sys_rstn</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sys_rstn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_RSTN.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sys_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sys_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_CLK.ASSOCIATED_RESET">sys_rstn</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>dmca_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>a6e6ef80</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>dmca_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>a6e6ef80</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_softwaredriver</spirit:name>
+        <spirit:displayName>Software Driver</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:sw.driver</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_softwaredriver_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>b09be3f6</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f64a5dae</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>bd_tcl</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>bd_tcl_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>16328387</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>peak_threshold</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">13</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>peak_threshold_count</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">5</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>na</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">8</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>nb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">8</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>a_over_na_mul_a_minus_b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>inv_na_mul_a_minus_b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>b</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>peakext_delay_time</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">8</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sys_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sys_rstn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>alg_en</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_fifo_datain</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">13</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>adc_otr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>peak_value_ok</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>peak_value</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">13</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>trapezd_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">17</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>triangle_data</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">17</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>signed</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0_512/blk_mem_gen_0_512.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0_na/blk_mem_gen_0_na.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0_nb/blk_mem_gen_0_nb.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/baseline_estimation.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/location_logic.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/peak_extraction.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/stacking_logic.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg_m1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg_m2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg_m3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg_m4.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/dmca_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_fd104a40</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0_512/blk_mem_gen_0_512.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0_na/blk_mem_gen_0_na.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/blk_mem_gen_0_nb/blk_mem_gen_0_nb.xci</spirit:name>
+        <spirit:userFileType>xci</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/baseline_estimation.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/location_logic.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/peak_extraction.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/stacking_logic.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg_m1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg_m2.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg_m3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/trapezd_alg_m4.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/dmca_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
+            <xilinx:mode xilinx:name="create_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_softwaredriver_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>drivers/dmca_v1_0/data/dmca.mdd</spirit:name>
+        <spirit:userFileType>mdd</spirit:userFileType>
+        <spirit:userFileType>driver_mdd</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/dmca_v1_0/data/dmca.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>driver_tcl</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/dmca_v1_0/src/Makefile</spirit:name>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/dmca_v1_0/src/dmca.h</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/dmca_v1_0/src/dmca.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>drivers/dmca_v1_0/src/dmca_selftest.c</spirit:name>
+        <spirit:fileType>cSource</spirit:fileType>
+        <spirit:userFileType>driver_src</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/dmca_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>bd_tcl_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>double exponential trapezoidal shaping</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">dmca_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>dmca_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>15</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2025-09-16T12:12:24Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16b5931e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14253734_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32774143_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@598ad761_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4cf960fa_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@531f9ba8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fb7d667_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5907b939_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9bd6416_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@707b6f97_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1289c351_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45f49da9_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d997aa2_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5885a082_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2938ac78_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b7bf025_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@219fe8e3_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@233a9526_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ca7be5e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@657fbc75_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e00a215_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@653fa0be_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ea264bc_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e3eb969_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37f2d394_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b4ffd40_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d4fbb0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c374c3d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7be91854_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@611bf584_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6892d6a6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c98f2af_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c040d0e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8f13e9f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ff16b98_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f91420_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70090a75_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@584e3245_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fde1e85_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b564559_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60d549c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ca853f4_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48bcfda0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e7aec4_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@447b2070_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26871abb_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23136d89_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25c8a1d1_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c6b938d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2898e7c7_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ce43cbd_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e6ac738_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bcb400a_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22944e0c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b5cb65e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bc7f7f4_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20bef2dd_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13917bd9_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@683463c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f497ab_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56dfb04b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@381bf4c9_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@148f8310_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b7a3193_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fc4457_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f134031_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1332d97f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c17e882_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10b8743c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6531e550_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@260f9bf9_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@597b6bbf_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d4aa981_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bff07e2_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fe6fa5f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30e20841_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fc88ea1_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c27e976_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d8e57b7_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b6316fd_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@602eb811_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fca9747_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a859fe0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ba8b990_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f79b795_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dbd20d0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f196477_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b201e88_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@442be4b1_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29bd4b94_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@171c6858_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77da7fe5_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b57b62a_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15f1ed57_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e13bd34_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1965efb6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54f6dc44_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a0b9dc_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73fe4ace_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51c04cab_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e5767b8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9ab3130_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d7924f8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2caa4788_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@484c729_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7477431f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@168db3f0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@520ee98c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8950da9_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50a5021f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c1b0e2b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b44d83c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c6fa5be_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d40bf3c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e40908e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@348fcb3b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@211ed162_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66616b85_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ddd79da_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@744d93e0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37049e88_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6429d9f1_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@609bf73b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27e7ddd6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f01545a_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70633309_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f589856_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f255db2_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e318e57_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528b128b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e6f8776_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ccadae8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e761d9d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61cd765e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e1f5886_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47deec31_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34935d1_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d3ab3ff_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c4271ba_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e1cb81_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e8b581c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c576bdc_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32bd6cb3_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1320c0b7_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79803ae6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49537bbb_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16dff803_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5667dd35_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@293caa2_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4baa3870_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6372a301_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@516a7ea5_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b04239c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@390a902b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dc1a303_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2776c115_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ae4fa23_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b3156f4_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32fa68fe_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d99328e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ac3fe40_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43e355c7_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fb2447e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@496b16e1_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@401534cf_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f180f6d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@af0a5b6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41afc38c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31dcd88d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d7d6bf0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@218a663d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@670eff3e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1631a78_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c9979fd_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5844159d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76939230_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@629447cc_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72e646ab_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ddead70_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e8339b7_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20a1b977_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cd07fba_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f6eba27_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@103b861a_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@439820a4_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54832350_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66423554_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4903fb1d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e283f87_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35c72ec8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15379961_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3260bc7d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@393abf3b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55d64e5f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d319e38_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eafb60f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@315fac68_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a19a35b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@683c4373_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54bac717_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c249831_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@796a7d9f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@111bb5de_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@465275ad_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4515826b_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dab2d18_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b49cee3_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f218d52_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@309d98dc_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5339fa10_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7648e6a6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28241c31_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ba64223_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3026d806_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56b6847f_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b878d0d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@182febc0_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7339bd54_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3addc5c6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f93f4cd_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d7f0235_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@552ba70d_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d623cae_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a1de14c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bba75c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bf0e22c_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5edd9e44_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60c2bbb_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@240ff3d1_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13485c28_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@434ba003_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f590cc6_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2627abe8_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24ab3b34_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a50840_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17f7992e_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ff671ae_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62d7e7ec_ARCHIVE_LOCATION">d:/workspace/vivado_workspace/vivado2018.3/dmca_bram_trapezd/ip_repo/dmca_1.0</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="2e49bb8f"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a0e40421"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="1d99173d"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="295231f7"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>
